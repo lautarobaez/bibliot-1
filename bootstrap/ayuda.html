@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ayuda - EEST Nº4</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minumun-scale1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-mm">
+                        <span class="sr-only">Desplegar / Ocultar menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img class="logotipo" src="img/logot4.jpg" alt="">
+                    <a href="#" class="navbar-brand">EEST Nº4</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navegacion-mm">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                Alumnos <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Materias</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Calificaciones</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Inscripciones</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="informacion.html">Información</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li class="active"><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="jumbotron">
+        <div id="cartelera" class="plantilla1"></div>
+        <div class="container">
+            <h1>Sección de Ayuda</h1>
+            <p class="titulo-blog">Información últil para los usuarios</p>
+        </div>
+    </section>
+
+        <div id="carteles-ayuda" class="cartelera-contenido">
+            <!-- Contenido se carga con JS -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Grupo Elite - 7º3ª</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function cambiarPlantilla(clase) {
+            document.getElementById("cartelera").className = clase;
+        }
+
+        // Cargar los carteles de ayuda
+        document.addEventListener("DOMContentLoaded", function() {
+            const contenedor = document.getElementById("carteles-ayuda");
+            contenedor.innerHTML = `
+                <div class="cartel">
+                    <h3>¿Cómo inscribirse?</h3>
+                    <p>Dirigite a la oficina de Alumnos o utilizá el formulario online.</p>
+                </div>
+                <div class="cartel">
+                    <h3>Problemas con la plataforma</h3>
+                    <p>Enviá un correo a soporte@eest4.edu.ar con una captura de pantalla.</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
