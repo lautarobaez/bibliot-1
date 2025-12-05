@@ -1,0 +1,13 @@
+{
+  "name": "bib-t1-main",
+  "version": "1.0.0",
+  "description": "Servicios complementarios para WebSocket de usuarios conectados en bib-t1.",
+  "main": "websocket-server.js",
+  "scripts": {
+    "start:ws": "node websocket-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
+
